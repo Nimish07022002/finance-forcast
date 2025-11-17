@@ -26,7 +26,7 @@ async def generate_business_outlook_forecast(request: ForecastTask):
             raise HTTPException(status_code=503, detail=analysis_result["forecast"])
 
         # Validate forecast data and sources using Pydantic models
-        forecast_data = StructuredForecast(**analysis_result["forecast_data"])
+        forecast_data = StructuredForecast(**analysis_result["forecast_data"].pop('sources_list'))
         sources = analysis_result["sources"]
 
         # Return the structured response
