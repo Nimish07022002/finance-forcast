@@ -6,7 +6,7 @@ load_dotenv()
 
 # --- API Configuration ---
 # In a real environment, API_KEY would be loaded from os.environ or a secret manager.
-API_KEY = os.environ.get("GEMINI_API_KEY") or "AIzaSyDCDzFvyVymuy9c-nsb2TXSY4AhTrpiSNY"
+API_KEY = os.environ.get("GEMINI_API_KEY") or ""
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent"
 
 # --- Database Configuration ---
